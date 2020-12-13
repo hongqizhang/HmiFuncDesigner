@@ -7,7 +7,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 QT += script
 QT += sql
 
-TARGET = project
+TARGET = ProjectManager
 TEMPLATE = app
 
 DESTDIR = $$IDE_BIN_PATH
@@ -40,11 +40,13 @@ LIBS += -L$$LINK_LIBRARY_PATH -lProjectDataUtils$${LIB_SUFFIX}
 
 
 SOURCES += main.cpp\
+    DevicePluginLoader.cpp \
         MainWindow.cpp \
     NewProjectDialog.cpp \
     SystemParametersWin.cpp \
     NetSettingDialog.cpp \
     DatabaseSettingDialog.cpp \
+    TableviewDelegate.cpp \
     TagIOEditDialog.cpp \
     TagManagerWin.cpp \
     TagTmpEditDialog.cpp \
@@ -76,11 +78,13 @@ SOURCES += main.cpp\
     widget/QQuickInputLineEdit.cpp
 
 HEADERS  += MainWindow.h \
+    DevicePluginLoader.h \
     NewProjectDialog.h \
     ../Public/Public.h \
     SystemParametersWin.h \
     NetSettingDialog.h \
     DatabaseSettingDialog.h \
+    TableviewDelegate.h \
     TagIOEditDialog.h \
     TagManagerWin.h \
     TagTmpEditDialog.h \

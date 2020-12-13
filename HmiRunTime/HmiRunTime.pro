@@ -1,5 +1,8 @@
 TEMPLATE = subdirs
 
 SUBDIRS += \
-    HmiRunTime
+    AppLauncher \
+    FileTransferTool \
+    HmiRunTimeData \
+    HmiRunTimeView
 
